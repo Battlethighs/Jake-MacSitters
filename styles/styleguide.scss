@@ -1,0 +1,394 @@
+@import "mixins";
+@import "typography";
+@import "helper-classes";
+
+/*
+ * Colors
+ */
+
+$light-grey:    #f2f2f2; 
+$medium-grey:    #bfbebb;
+$grey:          #7f7f7d;
+$charcoal:      #333333;
+
+/*
+ * ms Symbol
+ */
+
+.ms-symbol{
+	background: url(../img/symbol_logo.svg) no-repeat center;
+	background-size: 100% auto;
+	//@extend .logo;	// Extend statment commented out due to breaking SASS compilation. Appears to be unused.
+	text-indent: -9999px;
+	display: inline-block;
+}
+
+/*
+ * Styleguide
+ */
+ 
+#styleguide-header {
+	background-color: white;
+	background-color: rgba(255,255,255,0.97);
+	position: fixed;
+	width: 100%;
+	height: 75px;
+	z-index: 9980;
+	top: 0;
+	border-bottom: 1px solid $light-grey;
+	//@extend .box-sizing;	// Extend statment commented out due to breaking SASS compilation. Appears to be unused.
+	
+	hgroup {display: inline-block;}
+	
+	.site-header h1,
+	.site-header h2 {
+	    text-align: left;
+	}
+	
+	&.site-header h2.site-title {
+	    font-size: 18px;
+	    font-size: 1.125em;
+	    line-height: 75px;
+	    margin-bottom: 0;
+	    text-transform: uppercase;
+	    position: relative;
+	    letter-spacing: .125em;
+	    
+	    a {
+	    	display: block;
+	    	text-indent: -9999px;
+	    	height: 35px;
+	    	width: 35px;
+	    	margin-top: 18px;
+	    
+			span.site-description {
+				text-indent: 0;
+			    line-height: 1.5;
+			    font-size: .875em;
+			    font-weight: 200;
+			    font-weight: 400;
+			    text-align: left;
+			    display: inline-block;
+			    top: 0;
+			    left: 55px;
+			    //@extend .box-sizing;	// Extend statment commented out due to breaking SASS compilation. Appears to be unused.
+			    width: 600px;
+			    padding: 5px 0;
+			   
+			}
+	    }
+	}
+	
+}
+
+/*
+ * Styleguide Main Container
+ */
+
+.styleguide {
+
+/*
+ * Section Style
+ */
+ 
+	.styleguide-section {
+		padding: 100px 0 0 0;
+		
+		h2.section-head, .sub-section-head {
+			text-transform: uppercase;
+			letter-spacing: .125em;
+			margin: 20px auto;
+			border-top: 1px $brand-blue solid;
+			display: inline-block;
+			padding: 20px 0 0 0;
+		}
+		
+		h2.section-head {
+			margin: 2em auto;
+			font-size: 2em;
+			border-top: transparent;
+		}
+		
+		.sub-section-head {
+			font-weight: 600;
+		}
+		
+		.row {
+			margin-bottom: 20px;
+		}
+		
+		.styleguide-intro-head {
+			text-transform: uppercase;
+			letter-spacing: 0.125em;
+			color: $brand-blue;
+		}	
+	
+	}
+
+/*
+ * Main Container
+ */
+	
+	&.container.main-container {
+		margin: 75px auto auto auto;
+	}
+	
+	.site-content article {
+		margin-bottom: 200px;
+	}
+	
+	.entry-header {
+		border-top: 5px solid $charcoal;
+		
+		h1.entry-title {
+			line-height: 1;
+			padding-top: 5px;
+			margin-bottom: 5px;
+			
+			a {
+				line-height: 1;
+			}
+		}
+	}	
+
+/*
+ * Styleguide block
+ */
+
+	styleguide-h1 {
+		margin: 50px 0px;
+	}
+
+	.styleguide-block {
+		margin: auto auto 6em auto;
+
+		.styleguide-descriptions {
+			margin: 0px 0px 50px 0px;
+			@include border-radius(4px);
+			border: 1px solid $medium-grey;
+			
+			.styleguide-modifiers {
+				padding: 0;
+				margin: auto;
+
+				.styleguide-modifier {
+				    width: auto;
+				    background: $light-grey;
+				    padding: 10px 20px;
+				    list-style: none;
+				    
+				    &:nth-of-type(odd) {
+					    background: none;
+				    }
+				
+				    .styleguide-modifier-name {
+				    	font-weight: bold;
+				    	width: 200px;
+				    }
+				    .styleguide-modifier-description {
+				    	float: right;
+				    }
+				}
+			
+			}
+
+		}
+
+		.styleguide-color {
+			border-radius: 5px;
+			color: white;
+			width: 60px;
+			height: 60px;
+			font-weight: bold;
+			font-size: 13px;
+		}
+
+		.styleguide-element {
+			margin: 1em 0;
+			
+			&.styleguide-modifier {
+				border-bottom: 1px solid $light-grey;
+				padding: .5em;
+			}
+				
+			.styleguide-modifier-name {
+				float: right;
+				background: $light-grey;
+				@include border-radius(4px);
+				padding: 3px 7px;
+			}
+		}
+
+		.styleguide-example {
+			margin-top: 100px;
+		}
+
+		.styleguide-html {
+			padding: 10px;
+			background: #efefef;
+			border: 1px solid #dedede;
+			margin: 20px 0px;
+			
+				.styleguide-code {
+					font-family: monospace;
+					font-size: 1em;
+					overflow: auto;
+				}
+		}
+	}
+}
+
+styleguide.swatch {
+	width: 60px;
+	height: 60px;
+	display: block;
+	margin-bottom: 20px;
+	@include border-radius(5px);
+	
+}
+
+/*
+ * Styleguide Navigation
+ */
+
+.nav-container {
+	display: inline-block;
+	float: right;
+	height: 100px;
+}
+
+.main-navigation {
+	position: fixed;
+	top: 0;
+	width: auto;
+	width: 320px;
+	background: $charcoal;
+	height: 100%;
+	min-height: 100%;
+	z-index: 9990;
+	//@extend .box-sizing;	// Extend statment commented out due to breaking SASS compilation. Appears to be unused.
+	display: block;
+	opacity: 0;
+	right: -100%;
+	@include transition(all 500ms ease-in-out);	
+	
+	&.slide {
+		opacity: 1;
+		right: 0;
+	}
+	
+}
+
+#site-navigation {
+	padding: 75px 0px 0 0px;
+	//@extend .box-sizing;	// Extend statment commented out due to breaking SASS compilation. Appears to be unused.
+	
+	ul {
+		padding: 0;
+	
+		li {
+			border-bottom: 3px black solid;
+			@extend .transition;
+			list-style: none;
+			
+			a {
+				color: white;
+				text-transform: uppercase;
+				font-weight: 600;
+				font-size: .875em;
+				letter-spacing: .125em;
+				padding: 20px;
+				display: block;
+				text-decoration: none;
+			}
+			
+			&:hover {
+				background: $brand-hover-on-dark;
+				
+			}
+		}
+			
+	}
+}
+
+
+// Menu Hamburger Button
+
+a.menu {
+	position: fixed;
+	padding-right: 0px;
+	top: 25px;
+	padding: 10px;
+	z-index: 9999;
+	right: 20px;
+	
+	&:hover {
+		cursor: pointer;
+	}
+	
+	&:hover .hamburger {
+		&:before {
+			top: -7px;
+		}
+		
+		&:after {
+			bottom: -7px;
+		}
+	}
+	
+	&.expanded .hamburger {
+		background-color: transparent;
+		@include rotate(90deg);
+		
+		&:before, &:after {
+			background-color: $brand-primary-color;
+		}
+		
+		&:before {
+			@include rotate(-45deg);
+			top: 0;
+		}
+		
+		&:after {
+			@include rotate(45deg);
+			bottom: 0;
+		}
+		
+	}
+
+}
+
+a.menu .hamburger {
+	background-color: $charcoal;
+	height: 3px;
+	width: 18px;
+	@extend .transition;
+	position: relative;
+	text-indent: -9999px;
+	display: block;
+	
+	&:after, &:before {
+		width: 100%;
+		height: 100%;
+		display: block;
+		content: "";
+		position: absolute;	
+		background-color: $charcoal;
+		@extend .transition;		
+	}
+	
+	&:before {
+		top: -5px;
+	}
+	
+	&:after {
+		bottom: -5px;
+	}
+
+}
+
+.styleguide-buttons-darkbg {
+	.styleguide-element {
+		background: $charcoal;
+	}
+}

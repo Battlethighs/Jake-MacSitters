@@ -1,0 +1,61 @@
+
+@mixin color-class($selector,$color) {
+  .#{$selector} {
+    background: $color;
+  }
+}
+
+@function brand-example($selector,$color){
+	@return unquote(".#{$selector} - #{$color}");
+}
+
+
+$brand-blue: #007AC8;
+$brand-orange: #FF3E34;
+$brand-gold: #FFB43C;
+$brand-red: #9B1500;
+$brand-white: #FFFFFF;
+$brand-black: #332222;
+$brand-black-soft: lighten($brand-black, 10);
+$body-text: $brand-black-soft;
+$body-bg: $brand-white;
+$brand-primary-color: $brand-black-soft;
+$brand-hover-on-dark: darken($brand-blue, 20);
+
+
+/*
+Mac-Sitters Brand Colors
+
+#{brand-example('brand-blue',#{$brand-blue})}
+#{brand-example('brand-orange',#{$brand-orange})}
+#{brand-example('brand-gold',#{$brand-gold})}
+#{brand-example('brand-red',#{$brand-red})}
+#{brand-example('brand-white',#{$brand-white})}
+#{brand-example('brand-black',#{$brand-black})}
+#{brand-example('brand-black-soft',#{$brand-black-soft})}
+#{brand-example('body-text',#{$body-text})}
+#{brand-example('body-bg',#{$body-bg})}
+#{brand-example('brand-primary-color',#{$brand-primary-color})}
+#{brand-example('brand-hover-on-dark',#{$brand-hover-on-dark})}
+
+Styleguide ms_colors
+*/
+
+
+// TODO: separate color variables so they can be used without outputting the classes as well
+
+
+
+
+
+@include color-class('brand-blue',$brand-blue);
+@include color-class('brand-orange',$brand-orange);
+@include color-class('brand-gold',$brand-gold);
+@include color-class('brand-red',$brand-red);
+@include color-class('brand-white',$brand-white);
+@include color-class('brand-black',$brand-black);
+@include color-class('brand-black-soft',$brand-black-soft);
+@include color-class('body-text',$body-text);
+@include color-class('body-bg',$body-bg);
+@include color-class('brand-primary-color',$brand-primary-color);
+@include color-class('brand-hover-on-dark',$brand-hover-on-dark);

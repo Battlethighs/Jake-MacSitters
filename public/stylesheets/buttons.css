@@ -1,0 +1,115 @@
+/*
+Mac-Sitters Brand Colors
+
+.brand-blue - #007ac8
+.brand-orange - #ff3e34
+.brand-gold - #ffb43c
+.brand-red - #9b1500
+.brand-white - white
+.brand-black - #332222
+.brand-black-soft - #523636
+.body-text - #523636
+.body-bg - white
+.brand-primary-color - #523636
+.brand-hover-on-dark - #003c62
+
+Styleguide ms_colors
+*/
+.brand-blue {
+  background: #007ac8; }
+
+.brand-orange {
+  background: #ff3e34; }
+
+.brand-gold {
+  background: #ffb43c; }
+
+.brand-red {
+  background: #9b1500; }
+
+.brand-white {
+  background: white; }
+
+.brand-black {
+  background: #332222; }
+
+.brand-black-soft {
+  background: #523636; }
+
+.body-text {
+  background: #523636; }
+
+.body-bg {
+  background: white; }
+
+.brand-primary-color {
+  background: #523636; }
+
+.brand-hover-on-dark {
+  background: #003c62; }
+
+/* 
+ * Mixins 
+ */
+/*
+ * Add letter spacing for all caps text to improve tracking - from typography section
+ */
+/*
+Current Button Styles
+
+.ms-btn - Default button (Uses Mac-Sitters brand)
+
+
+Styleguide ms_buttons
+*/
+/**
+ * Button Mixins
+ */
+/*
+ * Utility to accept rgba color variables
+ *
+ * $prop: The CSS property to apply the color to (e.g. background-color)
+ * $color: The color to apply (accepts rgba, rgb, hex, name, or hsl, does not support hsla)
+ */
+/*
+ * Define colors for button states (does not support hsla)
+ *
+ * $bgcolor - default state background color
+ * $color - default state color
+ * $hover-bgcolor - hover state background color; defaults to $bgcolor
+ * $hover-color - hover state color; defaults to $color
+ * $active-bgcolor - active state background color; defaults to $hover-bgcolor
+ * $active-color - active state color; defaults to $hover-color
+ */
+/*
+ * New button styles
+ */
+/*
+ * New bordered button styles
+ *
+ * $color - Button color
+ */
+/*
+ * Default button color
+ */
+.ms-btn {
+  border-radius: 2em;
+  -webkit-transition: all 150ms ease-in-out;
+  -moz-transition: all 150ms ease-in-out;
+  -ms-transition: all 150ms ease-in-out;
+  -o-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+  padding: 1em 1.75em;
+  background-color: #007ac8; }
+  .ms-btn {
+    border: 0.5em solid #004b7c; }
+  .ms-btn:hover, .ms-btn:focus {
+    border: 0.5em solid #003c62; }
+  .ms-btn, .ms-btn:link, .ms-btn:visited {
+    color: white; }
+  .ms-btn:hover {
+    background-color: #006aaf;
+    color: white; }
+  .ms-btn:active {
+    background-color: #003c62;
+    color: white; }

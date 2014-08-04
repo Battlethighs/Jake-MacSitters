@@ -1,0 +1,100 @@
+@import "colors";
+@import "mixins";
+
+/*
+Current Button Styles
+
+.ms-btn - Default button (Uses Mac-Sitters brand)
+
+
+Styleguide ms_buttons
+*/
+
+
+/**
+ * Button Mixins
+ */
+
+/*
+ * Utility to accept rgba color variables
+ *
+ * $prop: The CSS property to apply the color to (e.g. background-color)
+ * $color: The color to apply (accepts rgba, rgb, hex, name, or hsl, does not support hsla)
+ */
+@mixin rgba-variable( $prop, $color ) {
+	@if ( alpha( $color ) != 1 ) {
+		@include rgba-with-fallback( $prop, red( $color ), green( $color ), blue( $color ), alpha( $color ) );
+	}
+	@else {
+		#{$prop}: $color;
+	}
+}
+
+/*
+ * Define colors for button states (does not support hsla)
+ *
+ * $bgcolor - default state background color
+ * $color - default state color
+ * $hover-bgcolor - hover state background color; defaults to $bgcolor
+ * $hover-color - hover state color; defaults to $color
+ * $active-bgcolor - active state background color; defaults to $hover-bgcolor
+ * $active-color - active state color; defaults to $hover-color
+ */
+@mixin button-color( $bgcolor, $color, $hover-bgcolor: $bgcolor, $hover-color: $color, $active-bgcolor: $hover-bgcolor, $active-color: $hover-color ) {
+
+	@include rgba-variable( background-color, $bgcolor );
+
+	&,
+	&:link,
+	&:visited {
+		@include rgba-variable( color, $color );
+	}
+
+	&:hover {
+		@include rgba-variable( background-color, $hover-bgcolor );
+		@include rgba-variable( color, $hover-color );
+	}
+
+	&:active {
+		@include rgba-variable( background-color, $active-bgcolor );
+		@include rgba-variable( color, $active-color );
+	}
+
+}
+
+/*
+ * New button styles
+ */
+@mixin new-btn {
+	@include transition(all 150ms ease-in-out);
+	padding: 1em 1.75em;
+}
+
+/*
+ * New bordered button styles
+ *
+ * $color - Button color
+ */
+@mixin new-btn-border( $color ) {
+	& {
+		border: .5em solid lighten( $color, 5% );
+	}
+	&:hover,
+	&:focus {
+		border: .5em solid $color;
+	}
+}
+
+/*
+ * Default button color
+ */
+@mixin default-btn-color {
+	@include button-color( $brand-blue, #FFF, darken( $brand-blue, 5% ), #FFF, darken( $brand-blue, 20% ) );
+}
+
+.ms-btn {
+	border-radius: 2em;
+	@include new-btn-border(darken( $brand-blue, 20% ));
+	@include new-btn;
+	@include default-btn-color;
+}

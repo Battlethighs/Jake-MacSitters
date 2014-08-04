@@ -1,0 +1,30 @@
+{
+  "name": "mac-sitters-styleguide",
+  "version": "0.1.0",
+  "authors": [
+    "Jake Berendes <jake@Mac-Sitters.com>"
+  ],
+  "description": "Official Mac Sitters Styleguide",
+  "main": "mac-sitters.styleguide.css",
+  "keywords": [
+    "macsitters",
+    "styleguide"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "views",
+    "public",
+    "Gemfile",
+    "Gemfile.lock",
+    "README.md",
+    "config.ru",
+    "app.rb",
+    ".gitignore",
+    "bower.json"
+  ]
+}

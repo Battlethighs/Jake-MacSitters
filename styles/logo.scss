@@ -1,0 +1,18 @@
+@import "colors";
+@import "mixins";
+
+/*
+Mac-Sitters Brand Colors
+
+.ms-logo - Mac-Sitters Logo
+
+Styleguide ms_logo
+*/
+
+.ms-logo {
+	color: $brand-gold;
+}
+
+.ms-logo .ms-logo-sitters {
+	color: $brand-blue;
+}

@@ -1,0 +1,5 @@
+@import "mixins";
+
+.transition {
+	@include transition(all 150ms ease-in-out);
+}

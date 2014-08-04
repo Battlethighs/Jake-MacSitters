@@ -1,0 +1,458 @@
+/* 
+ * Mixins 
+ */
+/*
+ * Add letter spacing for all caps text to improve tracking - from typography section
+ */
+/*
+Mac-Sitters Brand Colors
+
+.brand-blue - #007ac8
+.brand-orange - #ff3e34
+.brand-gold - #ffb43c
+.brand-red - #9b1500
+.brand-white - white
+.brand-black - #332222
+.brand-black-soft - #523636
+.body-text - #523636
+.body-bg - white
+.brand-primary-color - #523636
+.brand-hover-on-dark - #003c62
+
+Styleguide ms_colors
+*/
+.brand-blue {
+  background: #007ac8; }
+
+.brand-orange {
+  background: #ff3e34; }
+
+.brand-gold {
+  background: #ffb43c; }
+
+.brand-red {
+  background: #9b1500; }
+
+.brand-white {
+  background: white; }
+
+.brand-black {
+  background: #332222; }
+
+.brand-black-soft {
+  background: #523636; }
+
+.body-text {
+  background: #523636; }
+
+.body-bg {
+  background: white; }
+
+.brand-primary-color {
+  background: #523636; }
+
+.brand-hover-on-dark {
+  background: #003c62; }
+
+/* 
+ * Mixins 
+ */
+/*
+ * Add letter spacing for all caps text to improve tracking - from typography section
+ */
+/*
+Headline Styles
+
+.ms-headline - Mac-Sitters headline style
+.uppercase - Uppercase type style
+
+Styleguide h_styles
+*/
+/*
+Paragraph Styles
+
+.ms-paragraph - Mac-Sitters Paragraph style
+
+Styleguide p_styles
+*/
+/*
+Unordered List Styles
+
+.ms-ul - List styles
+
+Styleguide ul_styles
+*/
+/*
+Ordered List Styles
+
+.ms-ol - Standard numeric ordered list
+.ms-ol .alpha - Alphabetical ordered list
+.ms-ol .roman - Roman numeral ordered list
+
+Styleguide ol_styles
+*/
+body {
+  color: #523636;
+  font-family: Helvetica, sans-serif;
+  font-size: 1.5em;
+  font-weight: 400; }
+
+/*
+ * Headline Styles
+ */
+h1, h2, h3, h4, h5, h6 {
+  font-family: Helvetica, sans-serif;
+  line-height: 1.2;
+  font-weight: 300; }
+
+h1 {
+  font-size: 1.5em;
+  margin: 1em auto; }
+
+h2 {
+  font-size: 1.375em;
+  margin: 1em auto; }
+
+h3 {
+  font-size: 1.125em;
+  margin: 1em auto; }
+
+h4 {
+  font-size: 1em;
+  margin: 1em auto; }
+
+h5 {
+  font-size: .875em;
+  margin: 1em auto; }
+
+h6 {
+  font-size: .75em;
+  margin: 1em auto; }
+
+.site-headline {
+  color: #523636; }
+
+.uppercase {
+  letter-spacing: .125em;
+  text-transform: uppercase; }
+
+.ms-paragraph p {
+  font-size: 1em;
+  line-height: 2;
+  color: #523636;
+  padding: 0 0 20px 0; }
+
+.ms-logo {
+  font-family: adobe-garamond-pro,Georgia;
+  font-size: 7em;
+  font-weight: bold; }
+
+.ms-ul, .ms-ol {
+  padding: 10px 0 10px 20px; }
+  .ms-ul li, .ms-ol li {
+    padding: 0 0 10px 0; }
+
+.ms-ul {
+  list-style: disc; }
+
+.ms-ol {
+  list-style: decimal; }
+
+.alpha {
+  list-style: lower-alpha; }
+
+.roman {
+  list-style: upper-roman; }
+
+/* 
+ * Mixins 
+ */
+/*
+ * Add letter spacing for all caps text to improve tracking - from typography section
+ */
+.transition, #site-navigation ul li, a.menu .hamburger, a.menu .hamburger:after, a.menu .hamburger:before {
+  -webkit-transition: all 150ms ease-in-out;
+  -moz-transition: all 150ms ease-in-out;
+  -ms-transition: all 150ms ease-in-out;
+  -o-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out; }
+
+/*
+ * Colors
+ */
+/*
+ * ms Symbol
+ */
+.ms-symbol {
+  background: url(../img/symbol_logo.svg) no-repeat center;
+  background-size: 100% auto;
+  text-indent: -9999px;
+  display: inline-block; }
+
+/*
+ * Styleguide
+ */
+#styleguide-header {
+  background-color: white;
+  background-color: rgba(255, 255, 255, 0.97);
+  position: fixed;
+  width: 100%;
+  height: 75px;
+  z-index: 9980;
+  top: 0;
+  border-bottom: 1px solid #f2f2f2; }
+  #styleguide-header hgroup {
+    display: inline-block; }
+  #styleguide-header .site-header h1,
+  #styleguide-header .site-header h2 {
+    text-align: left; }
+  #styleguide-header.site-header h2.site-title {
+    font-size: 18px;
+    font-size: 1.125em;
+    line-height: 75px;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    position: relative;
+    letter-spacing: .125em; }
+    #styleguide-header.site-header h2.site-title a {
+      display: block;
+      text-indent: -9999px;
+      height: 35px;
+      width: 35px;
+      margin-top: 18px; }
+      #styleguide-header.site-header h2.site-title a span.site-description {
+        text-indent: 0;
+        line-height: 1.5;
+        font-size: .875em;
+        font-weight: 200;
+        font-weight: 400;
+        text-align: left;
+        display: inline-block;
+        top: 0;
+        left: 55px;
+        width: 600px;
+        padding: 5px 0; }
+
+/*
+ * Styleguide Main Container
+ */
+.styleguide {
+  /*
+   * Section Style
+   */
+  /*
+   * Main Container
+   */
+  /*
+   * Styleguide block
+   */ }
+  .styleguide .styleguide-section {
+    padding: 100px 0 0 0; }
+    .styleguide .styleguide-section h2.section-head, .styleguide .styleguide-section .sub-section-head {
+      text-transform: uppercase;
+      letter-spacing: .125em;
+      margin: 20px auto;
+      border-top: 1px #007ac8 solid;
+      display: inline-block;
+      padding: 20px 0 0 0; }
+    .styleguide .styleguide-section h2.section-head {
+      margin: 2em auto;
+      font-size: 2em;
+      border-top: transparent; }
+    .styleguide .styleguide-section .sub-section-head {
+      font-weight: 600; }
+    .styleguide .styleguide-section .row {
+      margin-bottom: 20px; }
+    .styleguide .styleguide-section .styleguide-intro-head {
+      text-transform: uppercase;
+      letter-spacing: 0.125em;
+      color: #007ac8; }
+  .styleguide.container.main-container {
+    margin: 75px auto auto auto; }
+  .styleguide .site-content article {
+    margin-bottom: 200px; }
+  .styleguide .entry-header {
+    border-top: 5px solid #333333; }
+    .styleguide .entry-header h1.entry-title {
+      line-height: 1;
+      padding-top: 5px;
+      margin-bottom: 5px; }
+      .styleguide .entry-header h1.entry-title a {
+        line-height: 1; }
+  .styleguide styleguide-h1 {
+    margin: 50px 0px; }
+  .styleguide .styleguide-block {
+    margin: auto auto 6em auto; }
+    .styleguide .styleguide-block .styleguide-descriptions {
+      margin: 0px 0px 50px 0px;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+      border: 1px solid #bfbebb; }
+      .styleguide .styleguide-block .styleguide-descriptions .styleguide-modifiers {
+        padding: 0;
+        margin: auto; }
+        .styleguide .styleguide-block .styleguide-descriptions .styleguide-modifiers .styleguide-modifier {
+          width: auto;
+          background: #f2f2f2;
+          padding: 10px 20px;
+          list-style: none; }
+          .styleguide .styleguide-block .styleguide-descriptions .styleguide-modifiers .styleguide-modifier:nth-of-type(odd) {
+            background: none; }
+          .styleguide .styleguide-block .styleguide-descriptions .styleguide-modifiers .styleguide-modifier .styleguide-modifier-name {
+            font-weight: bold;
+            width: 200px; }
+          .styleguide .styleguide-block .styleguide-descriptions .styleguide-modifiers .styleguide-modifier .styleguide-modifier-description {
+            float: right; }
+    .styleguide .styleguide-block .styleguide-color {
+      border-radius: 5px;
+      color: white;
+      width: 60px;
+      height: 60px;
+      font-weight: bold;
+      font-size: 13px; }
+    .styleguide .styleguide-block .styleguide-element {
+      margin: 1em 0; }
+      .styleguide .styleguide-block .styleguide-element.styleguide-modifier {
+        border-bottom: 1px solid #f2f2f2;
+        padding: .5em; }
+      .styleguide .styleguide-block .styleguide-element .styleguide-modifier-name {
+        float: right;
+        background: #f2f2f2;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        -ms-border-radius: 4px;
+        -o-border-radius: 4px;
+        border-radius: 4px;
+        padding: 3px 7px; }
+    .styleguide .styleguide-block .styleguide-example {
+      margin-top: 100px; }
+    .styleguide .styleguide-block .styleguide-html {
+      padding: 10px;
+      background: #efefef;
+      border: 1px solid #dedede;
+      margin: 20px 0px; }
+      .styleguide .styleguide-block .styleguide-html .styleguide-code {
+        font-family: monospace;
+        font-size: 1em;
+        overflow: auto; }
+
+styleguide.swatch {
+  width: 60px;
+  height: 60px;
+  display: block;
+  margin-bottom: 20px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px; }
+
+/*
+ * Styleguide Navigation
+ */
+.nav-container {
+  display: inline-block;
+  float: right;
+  height: 100px; }
+
+.main-navigation {
+  position: fixed;
+  top: 0;
+  width: auto;
+  width: 320px;
+  background: #333333;
+  height: 100%;
+  min-height: 100%;
+  z-index: 9990;
+  display: block;
+  opacity: 0;
+  right: -100%;
+  -webkit-transition: all 500ms ease-in-out;
+  -moz-transition: all 500ms ease-in-out;
+  -ms-transition: all 500ms ease-in-out;
+  -o-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out; }
+  .main-navigation.slide {
+    opacity: 1;
+    right: 0; }
+
+#site-navigation {
+  padding: 75px 0px 0 0px; }
+  #site-navigation ul {
+    padding: 0; }
+    #site-navigation ul li {
+      border-bottom: 3px black solid;
+      list-style: none; }
+      #site-navigation ul li a {
+        color: white;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: .875em;
+        letter-spacing: .125em;
+        padding: 20px;
+        display: block;
+        text-decoration: none; }
+      #site-navigation ul li:hover {
+        background: #003c62; }
+
+a.menu {
+  position: fixed;
+  padding-right: 0px;
+  top: 25px;
+  padding: 10px;
+  z-index: 9999;
+  right: 20px; }
+  a.menu:hover {
+    cursor: pointer; }
+  a.menu:hover .hamburger:before {
+    top: -7px; }
+  a.menu:hover .hamburger:after {
+    bottom: -7px; }
+  a.menu.expanded .hamburger {
+    background-color: transparent;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg); }
+    a.menu.expanded .hamburger:before, a.menu.expanded .hamburger:after {
+      background-color: #523636; }
+    a.menu.expanded .hamburger:before {
+      -webkit-transform: rotate(-45deg);
+      -moz-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+      -o-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+      top: 0; }
+    a.menu.expanded .hamburger:after {
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      transform: rotate(45deg);
+      bottom: 0; }
+
+a.menu .hamburger {
+  background-color: #333333;
+  height: 3px;
+  width: 18px;
+  position: relative;
+  text-indent: -9999px;
+  display: block; }
+  a.menu .hamburger:after, a.menu .hamburger:before {
+    width: 100%;
+    height: 100%;
+    display: block;
+    content: "";
+    position: absolute;
+    background-color: #333333; }
+  a.menu .hamburger:before {
+    top: -5px; }
+  a.menu .hamburger:after {
+    bottom: -5px; }
+
+.styleguide-buttons-darkbg .styleguide-element {
+  background: #333333; }

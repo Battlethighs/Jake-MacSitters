@@ -1,0 +1,175 @@
+/* 
+ * Mixins 
+ */
+
+@mixin border-radius($radius) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	-ms-border-radius: $radius;
+	-o-border-radius: $radius;
+	border-radius: $radius;
+}
+
+@mixin rotate($degrees) {
+	-webkit-transform: rotate($degrees);
+	-moz-transform: rotate($degrees);
+	-ms-transform: rotate($degrees);
+	-o-transform: rotate($degrees);
+	transform: rotate($degrees);
+}
+
+@mixin transition($properties: all, $duration: .3s, $function: ease) {
+	@if length($properties) > 1 {
+		-webkit-transition: $properties;
+		-moz-transition: $properties;
+		-ms-transition: $properties;
+		-o-transition: $properties;
+		transition: $properties;
+	} @else {
+		-webkit-transition: $properties $duration $function;
+		-moz-transition: $properties $duration $function;
+		-ms-transition: $properties $duration $function;
+		-o-transition: $properties $duration $function;
+		transition: $properties $duration $function;
+	}
+}
+
+@mixin rgba-with-fallback( $prop, $r, $g, $b, $a ) {
+	#{$prop}: rgb( $r, $g, $b );
+	#{$prop}: rgba( $r, $g, $b, $a );
+}
+
+@mixin animation-delay($delay) {
+	-webkit-animation-delay: $delay;
+	-moz-animation-delay: $delay;
+	-ms-animation-delay: $delay;
+	animation-delay: $delay;
+}
+
+// mixin for hooks into animate.css
+@mixin animate($name, $duration: 1s) {
+	-webkit-animation-fill-mode: both;
+	-moz-animation-fill-mode: both;
+	-ms-animation-fill-mode: both;
+	-o-animation-fill-mode: both;
+	animation-fill-mode: both;
+	-webkit-animation-duration: $duration;
+	-moz-animation-duration: $duration;
+	-ms-animation-duration: $duration;
+	-o-animation-duration: $duration;
+	animation-duration: $duration;
+	-webkit-animation-name: $name;
+    -moz-animation-name: $name;
+    -o-animation-name: $name;
+    animation-name: $name;
+}
+
+@mixin linear-gradient($start, $first_color, $first_stop, $second_color, $second_stop) {
+	background: $first_color;
+	// filters should override basic options but not standards .. background: linear-gradient - is the standard
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$first_color}', endColorstr='#{$second_color}',GradientType=0);
+	background: -moz-linear-gradient($start, $first_color $first_stop, $second_color $second_stop);
+	background: -webkit-gradient(linear, left $start left bottom, color-stop($first_stop, $first_color), color-stop($second_stop, $second_color));
+	background: -webkit-linear-gradient($start, $first_color $first_stop, $second_color $second_stop);
+	background: -o-linear-gradient($start, $first_color $first_stop, $second_color $second_stop);
+	background: -ms-linear-gradient($start, $first_color $first_stop, $second_color $second_stop);
+	background: linear-gradient(to $start, $first_color $first_stop, $second_color $second_stop);
+}
+
+// 3 color linear gradient
+@mixin linear-gradientB($start, $first_color, $first_stop, $second_color, $second_stop, $third_color, $third_stop) {
+	background: $first_color;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$first_color}', endColorstr='#{$third_color}',GradientType=0);
+	background: -moz-linear-gradient($start, $first_color $first_stop, $second_color $second_stop, $third_color $third_stop);
+	background: -webkit-gradient(linear, left $start left bottom, color-stop($first_stop, $first_color), color-stop($second_stop, $second_color), color-stop($third_stop, $third_color));
+	background: -webkit-linear-gradient($start, $first_color $first_stop, $second_color $second_stop, $third_color $third_stop);
+	background: -o-linear-gradient($start, $first_color $first_stop, $second_color $second_stop, $third_color $third_stop);
+	background: -ms-linear-gradient($start, $first_color $first_stop, $second_color $second_stop, $third_color $third_stop);
+	background: linear-gradient(to $start, $first_color $first_stop, $second_color $second_stop, $third_color $third_stop);
+}
+
+// file icons mixin  
+// TODO:
+// * create a section in the style guide and display these
+// * consider switching to a webfont
+@mixin file-icons($width: 32px, $height: 32px, $image-location: 'images/legacy/fileIcon/') {
+	background-size: contain;
+	width: $width;
+	height: $height;
+	&.file{
+		background-image: url('#{$image-location}mime_file.png');
+	}
+	&.folder{
+		background-image: url('#{$image-location}mime_folder.png');
+	}
+	&.code{
+		background-image: url('#{$image-location}mime_code.png');
+	}
+	&.font{
+		background-image: url('#{$image-location}mime_font.png');
+	}
+	&.html{
+		background-image: url('#{$image-location}mime_html.png');
+	}
+	&.movie{
+		background-image: url('#{$image-location}mime_movie.png');
+	}
+	&.music{
+		background-image: url('#{$image-location}mime_music.png');
+	}
+	&.pdf{
+		background-image: url('#{$image-location}mime_pdf.png');
+	}
+	&.pictures{
+		background-image: url('#{$image-location}mime_pictures.png');
+	}
+	&.powerpoint{
+		background-image: url('#{$image-location}mime_powerpoint.png');
+	}
+	&.script{
+		background-image: url('#{$image-location}mime_script.png');
+	}
+	&.spreadsheet{
+		background-image: url('#{$image-location}mime_spreadsheet.png');
+	}
+	&.text{
+		background-image: url('#{$image-location}mime_text_doc.png');
+	}
+	&.zipped{
+		background-image: url('#{$image-location}mime_zipped.png');
+	}
+}
+
+@mixin zebrafy {
+	tr:not(.header-row) {
+		//ng-class-odd / ng-class-even
+		&.odd {
+			background-color: rgba(0,0,0,.02);
+		}
+	}
+}
+
+// font related mixins
+// TODO: 
+// * discuss whether this is the right place for font or type related mixins
+// * should this be in a set of reset mixins?
+@mixin font-size($sizeValue: 1.6) {
+  font-size: ($sizeValue * 10) + px;
+  font-size: $sizeValue + rem;
+}
+
+/*
+ * Add letter spacing for all caps text to improve tracking - from typography section
+ */
+@mixin uppercase {
+	letter-spacing: .125em;					
+	text-transform: uppercase;
+}
+
+@mixin ellipsify {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+	-webkit-text-overflow: ellipsis;
+}

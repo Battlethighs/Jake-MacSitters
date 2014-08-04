@@ -1,0 +1,55 @@
+<script>
+  // Disable default button behavior
+  var  i;
+  var buttons = document.querySelectorAll( ".ms-btn" );
+  for ( i = 0; i < buttons.length; i += 1 ) {
+    buttons[ i ].addEventListener( "click", function( e ) {
+      e.preventDefault();
+      e.stopPropagation();
+    });
+  }
+</script>
+
+<section class="typography styleguide-section">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="col-lg-12">
+           <h2 class="section-head">Typography Styles</h2>         
+           
+             <% styleguide_block  'h_styles' do %>
+               <h1 class="$modifier_class">h1 Heading</h1>
+               <h2 class="$modifier_class">h2 Heading</h2>
+               <h3 class="$modifier_class">h3 Heading</h3>
+               <h4 class="$modifier_class">h4 Heading</h4>
+               <h5 class="$modifier_class">h5 Heading</h5>
+               <h6 class="$modifier_class">h6 Heading</h6>
+             <% end %> 		
+             
+             <% styleguide_block  'p_styles' do %>
+               <p class="$modifier_class">Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec sed odio dui. Nullam id dolor id nibh ultricies vehicula ut id elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+             <% end %> 	    
+             
+             <% styleguide_block  'ul_styles' do %>
+               <ul class="$modifier_class">
+	             <li>List item</li>  
+	             <li>List item</li>
+	             <li>List item</li>
+	             <li>List item</li> 
+               </ul>             
+
+             <% end %> 	                      	
+			
+             <% styleguide_block  'ol_styles' do %>
+               <ol class="$modifier_class">
+	             <li>List item</li>  
+	             <li>List item</li>
+	             <li>List item</li>
+	             <li>List item</li> 
+               </ul>             
+
+             <% end %>			
+			
+          </div>
+        </div>
+      </div>
+    </section>

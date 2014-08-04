@@ -1,0 +1,37 @@
+<section class="styleguide-block">
+
+  <h4 class="sub-section-head"><%= @section.description %></h4>
+  <div class="styleguide-descriptions">
+    <% if @section.modifiers.any? %>
+      <ul class="styleguide-modifiers">
+        <% @section.modifiers.each do |modifier| %>
+          <li class="styleguide-modifier">
+            <span class="styleguide-modifier-name"><%= modifier.name %></span>
+            <span class="styleguide-modifier-description"><%= modifier.description %></span>
+          </li>
+        <% end %>
+      </ul>
+    <% end %>
+  </div>
+  
+<!--  <% if @section.section != 'colors' %>
+    <div class="styleguide-element">
+      <span class="styleguide-modifier-name">default</span>
+      <%= @example_html %>
+    </div>
+  <% end %>-->
+  
+  <% @section.modifiers.each do |modifier| %>
+    <div class="styleguide-element styleguide-modifier <%= modifier.class_name.gsub( 'ms-', 'styleguide-element-ms-') %>">
+      <span class="styleguide-modifier-name"><%= modifier.name %></span>
+      <%= @example_html.gsub('$modifier_class', " #{modifier.class_name}") %>
+    </div>
+  <% end %>
+
+
+  <h4><em>example html:</em></h4>
+  <div class="styleguide-html">
+    <pre class="styleguide-code"><%= @escaped_html %></pre>
+  </div>
+
+</section>

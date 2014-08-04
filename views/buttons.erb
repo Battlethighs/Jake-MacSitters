@@ -1,0 +1,26 @@
+<script>
+  // Disable default button behavior
+  var  i;
+  var buttons = document.querySelectorAll( ".styleguide-element a, .styleguide-element input[type='button'], .styleguide-element button" );
+  for ( i = 0; i < buttons.length; i += 1 ) {
+    buttons[ i ].addEventListener( "click", function( e ) {
+      e.preventDefault();
+      e.stopPropagation();
+    });
+  }
+</script>
+
+<section class="buttons styleguide-section">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="col-lg-12">
+        <h2 class="section-head">Button Styles</h2>
+           <% styleguide_block  'ms_buttons' do %>
+             <button class="$modifier_class">Example Button</button>
+             <a class="$modifier_class">Example Button</a>
+             <input type="button" class="$modifier_class" value="Example Button">
+           <% end %> 
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,68 @@
+/*
+Mac-Sitters Brand Colors
+
+.brand-blue - #007ac8
+.brand-orange - #ff3e34
+.brand-gold - #ffb43c
+.brand-red - #9b1500
+.brand-white - white
+.brand-black - #332222
+.brand-black-soft - #523636
+.body-text - #523636
+.body-bg - white
+.brand-primary-color - #523636
+.brand-hover-on-dark - #003c62
+
+Styleguide ms_colors
+*/
+.brand-blue {
+  background: #007ac8; }
+
+.brand-orange {
+  background: #ff3e34; }
+
+.brand-gold {
+  background: #ffb43c; }
+
+.brand-red {
+  background: #9b1500; }
+
+.brand-white {
+  background: white; }
+
+.brand-black {
+  background: #332222; }
+
+.brand-black-soft {
+  background: #523636; }
+
+.body-text {
+  background: #523636; }
+
+.body-bg {
+  background: white; }
+
+.brand-primary-color {
+  background: #523636; }
+
+.brand-hover-on-dark {
+  background: #003c62; }
+
+/* 
+ * Mixins 
+ */
+/*
+ * Add letter spacing for all caps text to improve tracking - from typography section
+ */
+/*
+Mac-Sitters Brand Colors
+
+.ms-logo - Mac-Sitters Logo
+
+Styleguide ms_logo
+*/
+.ms-logo {
+  color: #ffb43c; }
+
+.ms-logo .ms-logo-sitters {
+  color: #007ac8; }

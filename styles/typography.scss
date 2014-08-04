@@ -1,0 +1,138 @@
+@import "colors";
+@import "mixins";
+
+/*
+Headline Styles
+
+.ms-headline - Mac-Sitters headline style
+.uppercase - Uppercase type style
+
+Styleguide h_styles
+*/
+
+
+/*
+Paragraph Styles
+
+.ms-paragraph - Mac-Sitters Paragraph style
+
+Styleguide p_styles
+*/
+
+/*
+Unordered List Styles
+
+.ms-ul - List styles
+
+Styleguide ul_styles
+*/
+
+/*
+Ordered List Styles
+
+.ms-ol - Standard numeric ordered list
+.ms-ol .alpha - Alphabetical ordered list
+.ms-ol .roman - Roman numeral ordered list
+
+Styleguide ol_styles
+*/
+
+$proxima: Helvetica, sans-serif;
+
+body {
+	color: $body-text;
+	font-family: $proxima;
+	font-size: 1.5em;
+	font-weight: 400;
+}
+
+/*
+ * Headline Styles
+ */
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: $proxima;
+	line-height: 1.2;
+	font-weight: 300;
+}
+
+h1 {
+	font-size: 1.5em;
+	margin: 1em auto;
+}
+
+h2 {
+	font-size: 1.375em;
+	margin: 1em auto;	
+}
+
+h3 {
+	font-size: 1.125em;
+	margin: 1em auto;	
+}
+
+h4 {
+	font-size: 1em;
+	margin: 1em auto;
+}
+
+h5 {
+	font-size: .875em;
+	margin: 1em auto;	
+}
+
+h6 {
+	font-size: .75em;
+	margin: 1em auto;	
+}
+
+.site-headline {
+	color: $brand-primary-color;
+}
+
+.uppercase {
+	@include uppercase;
+}
+
+.ms-paragraph {
+	
+	p {
+		font-size: 1em;
+		line-height: 2;
+		color: $body-text;
+		padding: 0 0 20px 0;
+	}
+}
+
+.ms-logo {
+	font-family: adobe-garamond-pro,Georgia;
+	font-size: 7em;
+	font-weight: bold;
+}
+
+.ms-ul, .ms-ol {	
+	padding: 10px 0 10px 20px;
+	
+	li {
+	    padding: 0 0 10px 0;
+	}
+}
+
+.ms-ul {
+
+		list-style: disc;
+}
+
+.ms-ol {
+	
+	list-style: decimal;
+}
+
+.alpha {
+	list-style: lower-alpha;
+}
+
+.roman {
+	
+		list-style: upper-roman;
+}

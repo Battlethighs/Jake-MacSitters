@@ -1,0 +1,159 @@
+/*
+Mac-Sitters Brand Colors
+
+.brand-blue - #007ac8
+.brand-orange - #ff3e34
+.brand-gold - #ffb43c
+.brand-red - #9b1500
+.brand-white - white
+.brand-black - #332222
+.brand-black-soft - #523636
+.body-text - #523636
+.body-bg - white
+.brand-primary-color - #523636
+.brand-hover-on-dark - #003c62
+
+Styleguide ms_colors
+*/
+.brand-blue {
+  background: #007ac8; }
+
+.brand-orange {
+  background: #ff3e34; }
+
+.brand-gold {
+  background: #ffb43c; }
+
+.brand-red {
+  background: #9b1500; }
+
+.brand-white {
+  background: white; }
+
+.brand-black {
+  background: #332222; }
+
+.brand-black-soft {
+  background: #523636; }
+
+.body-text {
+  background: #523636; }
+
+.body-bg {
+  background: white; }
+
+.brand-primary-color {
+  background: #523636; }
+
+.brand-hover-on-dark {
+  background: #003c62; }
+
+/* 
+ * Mixins 
+ */
+/*
+ * Add letter spacing for all caps text to improve tracking - from typography section
+ */
+/*
+Headline Styles
+
+.ms-headline - Mac-Sitters headline style
+.uppercase - Uppercase type style
+
+Styleguide h_styles
+*/
+/*
+Paragraph Styles
+
+.ms-paragraph - Mac-Sitters Paragraph style
+
+Styleguide p_styles
+*/
+/*
+Unordered List Styles
+
+.ms-ul - List styles
+
+Styleguide ul_styles
+*/
+/*
+Ordered List Styles
+
+.ms-ol - Standard numeric ordered list
+.ms-ol .alpha - Alphabetical ordered list
+.ms-ol .roman - Roman numeral ordered list
+
+Styleguide ol_styles
+*/
+body {
+  color: #523636;
+  font-family: Helvetica, sans-serif;
+  font-size: 1.5em;
+  font-weight: 400; }
+
+/*
+ * Headline Styles
+ */
+h1, h2, h3, h4, h5, h6 {
+  font-family: Helvetica, sans-serif;
+  line-height: 1.2;
+  font-weight: 300; }
+
+h1 {
+  font-size: 1.5em;
+  margin: 1em auto; }
+
+h2 {
+  font-size: 1.375em;
+  margin: 1em auto; }
+
+h3 {
+  font-size: 1.125em;
+  margin: 1em auto; }
+
+h4 {
+  font-size: 1em;
+  margin: 1em auto; }
+
+h5 {
+  font-size: .875em;
+  margin: 1em auto; }
+
+h6 {
+  font-size: .75em;
+  margin: 1em auto; }
+
+.site-headline {
+  color: #523636; }
+
+.uppercase {
+  letter-spacing: .125em;
+  text-transform: uppercase; }
+
+.ms-paragraph p {
+  font-size: 1em;
+  line-height: 2;
+  color: #523636;
+  padding: 0 0 20px 0; }
+
+.ms-logo {
+  font-family: adobe-garamond-pro,Georgia;
+  font-size: 7em;
+  font-weight: bold; }
+
+.ms-ul, .ms-ol {
+  padding: 10px 0 10px 20px; }
+  .ms-ul li, .ms-ol li {
+    padding: 0 0 10px 0; }
+
+.ms-ul {
+  list-style: disc; }
+
+.ms-ol {
+  list-style: decimal; }
+
+.alpha {
+  list-style: lower-alpha; }
+
+.roman {
+  list-style: upper-roman; }

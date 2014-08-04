@@ -1,0 +1,416 @@
+/*
+	Shared Form styles : borrowed from formalized css : http://sonspring.com/journal/formalize-css
+*/
+
+/*
+	Scrollbars
+*/
+
+/*
+	Uncomment to turn on IOS style scrollbars
+*/
+
+/*::-webkit-scrollbar{width:9px;height:9px;}
+::-webkit-scrollbar-button:start:decrement,
+::-webkit-scrollbar-button:end:increment{display:block;height:0;background-color:transparent;}
+::-webkit-scrollbar-track-piece{background-color:#FAFAFA;-webkit-border-radius:0;-webkit-border-bottom-right-radius:8px;-webkit-border-bottom-left-radius:8px;}
+::-webkit-scrollbar-thumb:vertical{height:50px;background-color:#ccc;-webkit-border-radius:8px;}
+::-webkit-scrollbar-thumb:horizontal{width:50px;background-color:#ccc;-webkit-border-radius:8px;}*/
+
+/* `Widths
+----------------------------------------------------------------------------------------------------*/
+
+.tiny{
+	width: 50px;
+}
+t
+.small {
+	width: 100px;
+}
+
+.medium {
+	width: 150px;
+}
+
+.large {
+	width: 200px;
+}
+
+.xlarge {
+	width: 250px;
+}
+
+.xxlarge {
+	width: 300px;
+}
+
+.full {
+	width: 100%;
+	display: block;
+}
+
+/* Text Sizes on form fields */
+.txt-smaller,
+input[type="text"].txt-smaller,
+input[type="password"].txt-smaller,
+input[type="button"].txt-smaller,
+input[type="email"].txt-smaller {
+  font-size:.5em;
+}
+
+.txt-small,
+input[type="text"].txt-small,
+input[type="password"].txt-small,
+input[type="button"].txt-small,
+input[type="email"].txt-small {
+  font-size:.75em;
+}
+
+
+.txt-big,
+input[type="text"].txt-big,
+input[type="password"].txt-big,
+input[type="button"].txt-big,
+input[type="email"].txt-big {
+	font-size: 16px;
+}
+
+.txt-bigger,
+input[type="text"].txt-bigger,
+input[type="password"].txt-bigger,
+input[type="button"].txt-bigger,
+input[type="email"].txt-bigger {
+	font-size: 20px;
+}
+
+.txt-xl,
+input[type="text"].txt-xl,
+input[type="password"].txt-xl,
+input[type="button"].txt-xl,
+input[type="email"].txt-xl {
+	font-size: 30px;
+}
+
+/*
+	Added via JS to <textarea> and class="input_full".
+	Applies only to IE7. Other browsers don't need it.
+*/
+.ie7 input .full {
+	display: block;
+	padding-right: 8px;
+}
+
+/* `UI Consistency
+----------------------------------------------------------------------------------------------------*/
+
+::-moz-focus-inner {
+	border: 0;
+}
+
+input[type="search"]::-webkit-search-decoration {
+	display: none;
+}
+
+input,
+button,
+select,
+textarea {
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding;
+  background-clip: padding-box;
+	margin: 0;
+	vertical-align: middle;
+}
+
+button,
+input[type="reset"],
+input[type="submit"],
+input[type="button"] {
+	-webkit-appearance: none;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	background: #ddd url(../images/form-btn.png) repeat-x;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), color-stop(1, #ddd));
+	background: -moz-linear-gradient(top center, #fff 0%, #ddd 100%);
+	border: 1px solid;
+	border-color: #ddd #bbb #999;
+	cursor: pointer;
+	color: #333;
+	font: bold 12px/1.2 Arial, sans-serif;
+	outline: 0;
+	overflow: visible;
+	padding: 5px 10px;
+	text-shadow: #fff 0 1px -1px;
+	width: auto;
+	font-size: 14px;
+}
+
+button.icon{
+	padding:7px 5px 4px 5px;
+	background: #eeeeee; /* old browsers */
+	background: -moz-linear-gradient(top, #eeeeee 0%, #cccccc 100%); /* firefox */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eeeeee), color-stop(100%,#cccccc)); /* webkit */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#cccccc',GradientType=0 ); /* ie */
+}
+
+input[type="submit"], input.confirm, button.positive{
+	color: #002433;
+	text-shadow: #fff 0 1px -1px;
+	border:1px solid #3C6981;
+	background: #deefff; /* old browsers */
+	background: -moz-linear-gradient(top, #deefff 0%, #98bede 100%); /* firefox */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#deefff), color-stop(100%,#98bede)); /* webkit */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#deefff', endColorstr='#98bede',GradientType=0 ); /* ie */
+}
+
+button.rounded,
+input[type="reset"].rounded,
+input[type="submit"].rounded,
+input[type="button"].rounded{
+	-moz-border-radius: 30px;
+	-webkit-border-radius: 30px;
+	border-radius:30px;
+	padding: 4px 7px;
+}
+
+/* IE7 */
+.ie7 button,
+.ie7 input[type="reset"],
+.ie7 input[type="submit"],
+.ie7 input[type="button"]{
+	padding-top: 2px;
+	padding-bottom: 0px;
+}
+
+.ie7 button {
+	padding-top: 1px;
+	padding-bottom: 1px;
+}
+
+button[disabled],
+input[type="reset"][disabled],
+input[type="submit"][disabled],
+input[type="button"][disabled] {
+	color: #888;
+}
+
+textarea,
+select,
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"] {
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0;
+	border-radius: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	background-color: #fff;
+	border: 1px solid;
+	border-color: #848484 #c1c1c1 #e1e1e1;
+	color: #000;
+	outline: 0;
+	padding: 5px;
+	font-size: 14px;
+	font-family: Arial, sans-serif;
+	height: 1.8em;
+
+	/* IE7 */
+	*padding-top: 2px;
+	*padding-bottom: 1px;
+	*height: auto;
+}
+
+/* fix ie9 */
+.ie9 textarea,
+.ie9 select,
+.ie9 input[type="date"],
+.ie9 input[type="datetime"],
+.ie9 input[type="datetime-local"],
+.ie9 input[type="email"],
+.ie9 input[type="month"],
+.ie9 input[type="number"],
+.ie9 input[type="password"],
+.ie9 input[type="search"],
+.ie9 input[type="tel"],
+.ie9 input[type="text"],
+.ie9 input[type="time"],
+.ie9 input[type="url"],
+.ie9 input[type="week"] {
+	height: auto;
+}
+
+.gecko textarea,
+.gecko select,
+.gecko input[type="date"],
+.gecko input[type="datetime"],
+.gecko input[type="datetime-local"],
+.gecko input[type="email"],
+.gecko input[type="month"],
+.gecko input[type="number"],
+.gecko input[type="password"],
+.gecko input[type="search"],
+.gecko input[type="tel"],
+.gecko input[type="text"],
+.gecko input[type="time"],
+.gecko input[type="url"],
+.gecko input[type="week"] {
+	height: auto;
+}
+
+select{
+	padding:0;
+	height: auto;
+}
+
+/*
+	Separate rule for Firefox.
+	Cannot stack with WebKit's.
+*/
+input.placeholder_text,
+textarea.placeholder_text {
+	color: #ccc;
+}
+
+textarea[disabled],
+select[disabled],
+input[type="date"][disabled],
+input[type="datetime"][disabled],
+input[type="datetime-local"][disabled],
+input[type="email"][disabled],
+input[type="month"][disabled],
+input[type="number"][disabled],
+input[type="password"][disabled],
+input[type="search"][disabled],
+input[type="tel"][disabled],
+input[type="text"][disabled],
+input[type="time"][disabled],
+input[type="url"][disabled],
+input[type="week"][disabled] {
+	background-color: #eee;
+	color: #888;
+}
+
+button:focus,
+button:active,
+input:focus,
+input:active,
+select:focus,
+select:active,
+textarea:focus,
+textarea:active {
+	-moz-box-shadow: #619CD3 0 0 5px;
+	-webkit-box-shadow: #619CD3 0 0 5px;
+	box-shadow: #619CD3 0 0 5px;
+	border:1px solid #619CD3;
+
+/*	-moz-box-shadow: #ccc 0 0 7px;
+	-webkit-box-shadow: #ccc 0 0 7px;
+	box-shadow: #ccc 0 0 7px;*/
+
+
+	/* for Opera */
+	z-index: 1;
+}
+
+
+button:active,
+input[type="reset"]:active,
+input[type="submit"]:active,
+input[type="button"]:active{
+	background: #eeeeee; /* old browsers */
+	background: -moz-linear-gradient(top, #cccccc 0%, #eeeeee 100%); /* firefox */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cccccc), color-stop(100%,#eeeeee)); /* webkit */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cccccc', endColorstr='#eeeeee',GradientType=0 ); /* ie */
+}
+
+textarea,
+select[multiple] {
+	height: auto;
+}
+
+select[multiple],
+.is_webkit select[multiple] {
+	background-image: none;
+	padding: 0;
+}
+
+textarea {
+  min-height: 40px;
+	overflow: auto;
+	resize: vertical;
+	width: 100%;
+}
+
+optgroup {
+	color: #000;
+	font-style: normal;
+	font-weight: normal;
+}
+
+label{
+	margin:3px 0 3px 1px;
+	clear: both;
+	text-shadow: #fff 0 1px -1px;
+}
+
+label.full{ display:block; }
+
+label.inline{
+	display: inline !important;
+	margin-right:5px;
+}
+
+/* auto clear for modern browsers */
+label input:after{
+  content: ".";
+  display: block;
+  height: 0;
+  font-size:0;
+  clear: both;
+  visibility:hidden;
+}
+
+label.error {
+	display: block;
+	color: red;
+	margin-top:0;
+	position: absolute;
+	font-size: 11px;
+}
+
+.form-footer{
+	text-align: right;
+  padding-top: 10px;
+}
+
+.form-footer input[type="submit"]{
+  margin-left:7px;
+  float:right;
+}
+
+.field-group {
+	margin: 10px 0;
+	border-bottom:1px dotted #ccc;
+}
+
+
+/* tables for forms */
+table.form{
+  width: 100%;
+}
+
+table.form td{
+  padding:5px;
+}
